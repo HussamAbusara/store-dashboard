@@ -36,6 +36,82 @@
 
 ---
 
+## 📁 Project Structure
+
+> **Note:** This repository contains a **selected subset** of the full project for portfolio purposes.  
+> Core business logic, database schema, and sensitive configurations are intentionally excluded.
+
+### Full project (local)
+
+```
+store-dashboard/
+├── frontend/
+│   ├── public/
+│   │   └── locales/
+│   │       ├── ar/translation.json
+│   │       └── en/translation.json
+│   └── src/
+│       ├── App.tsx
+│       ├── api.ts
+│       ├── BarcodeScanner.tsx
+│       ├── i18n/index.ts
+│       └── pages/
+│           ├── Dashboard.tsx
+│           ├── POS.tsx
+│           ├── Products.tsx
+│           ├── Orders.tsx
+│           ├── Suppliers.tsx
+│           ├── Login.tsx
+│           ├── Settings.tsx
+│           └── Storefront.tsx       ← in development
+│
+└── backend/
+    └── src/
+        ├── index.ts
+        ├── types.ts
+        ├── ai.ts                    ← not published
+        ├── auth/
+        │   ├── auth.ts
+        │   └── routes.ts
+        ├── db/
+        │   ├── connection.ts        ← not published
+        │   ├── migrate.ts           ← not published
+        │   └── queries.ts
+        ├── pos/routes.ts
+        └── stores/
+            ├── queries.ts           ← not published
+            └── routes.ts
+```
+
+### What's published in this repo ✅
+
+```
+store-dashboard/
+├── frontend/
+│   └── src/
+│       ├── App.tsx                  ← app structure & routing
+│       ├── BarcodeScanner.tsx       ← barcode input component
+│       ├── i18n/index.ts            ← bilingual setup (AR/EN)
+│       └── pages/
+│           ├── Dashboard.tsx        ← main dashboard view
+│           └── POS.tsx              ← point-of-sale logic
+│
+├── backend/
+│   └── src/
+│       ├── index.ts                 ← server entry point
+│       ├── types.ts                 ← shared type definitions
+│       ├── auth/auth.ts             ← authentication logic
+│       └── db/queries.ts            ← database query layer
+│
+├── .env.example                     ← environment variable template
+├── .gitignore
+└── README.md
+```
+
+> 🔒 **Not included:** `ai.ts`, `db/connection.ts`, `db/migrate.ts`, `stores/queries.ts`, and other core modules are excluded to protect proprietary logic.
+
+---
+
 ## 🛠️ Tech Stack
 
 ### Frontend
@@ -48,29 +124,6 @@
 - **PostgreSQL** — relational database
 - RESTful API architecture
 - JWT-based authentication
-
----
-
-## 📁 Project Structure
-
-```
-store-dashboard/
-├── frontend/
-│   ├── public/locales/          # Translation files (ar / en)
-│   └── src/
-│       ├── pages/               # Dashboard, POS, Products, Orders...
-│       ├── i18n/                # Internationalization setup
-│       ├── api.ts               # API client
-│       └── BarcodeScanner.tsx   # Barcode input component
-│
-└── backend/
-    └── src/
-        ├── auth/                # Authentication logic & routes
-        ├── db/                  # DB connection & queries
-        ├── pos/                 # POS routes
-        ├── stores/              # Store management
-        └── suppliers/           # Supplier routes
-```
 
 ---
 
@@ -88,6 +141,8 @@ Copy `.env.example` to `.env` and fill in the required values:
 cp backend/.env.example backend/.env
 ```
 
+> ⚠️ This repo is a partial showcase. The project is not fully runnable from these files alone.
+
 ### Installation
 
 ```bash
@@ -96,16 +151,6 @@ cd backend && npm install
 
 # Install frontend dependencies
 cd ../frontend && npm install
-```
-
-### Running Locally
-
-```bash
-# Start backend
-cd backend && npm run dev
-
-# Start frontend (new terminal)
-cd frontend && npm run dev
 ```
 
 ---
