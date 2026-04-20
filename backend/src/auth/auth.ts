@@ -2,7 +2,7 @@ import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import pool from '../db/connection';
 
-const JWT_SECRET = process.env.JWT_SECRET || 'secret_change_in_production';
+const JWT_SECRET = 
 const JWT_EXPIRES = '7d';
 
 export interface UserPayload {
