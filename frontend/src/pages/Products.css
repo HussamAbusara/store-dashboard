@@ -1,0 +1,79 @@
+/* إضافات خاصة بالمتغيرات المحسنة */
+.variant-item {
+  border: 1.5px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: #fff;
+}
+
+.variant-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.remove-btn {
+  padding: 6px 12px;
+  background: #fee;
+  color: #c33;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.attributes-box {
+  margin-top: 16px;
+}
+
+.attributes-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.attribute-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.attr-key {
+  background: #f8f9fa;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #444;
+  border: 1px solid #ddd;
+}
+
+.error-text {
+  color: #e24b4a;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.image-preview-container {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.image-preview-container button {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  border: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+}
